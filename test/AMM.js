@@ -47,15 +47,16 @@ describe('AMM', () => {
     transaction = await token2.connect(deployer).transfer(investor2.address, tokens(100000))
     await transaction.wait()
 
-    // Deploy AMM
+    // Deploy the AMM
     const AMM = await ethers.getContractFactory('AMM')
     amm = await AMM.deploy(token1.address, token2.address)
+    console.log("made it to before each")
   })
 
   describe('Deployment', () => {
-
+console.log("made it to deployment")
     it('has an address', async () => {
-      expect(amm.address).to.not.equal(0x0)
+      expect(amm.address).to.not.equal(0x0) // checks for the presence of an address
     })
 
     it('tracks token1 address', async () => {

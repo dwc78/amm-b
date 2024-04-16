@@ -4,6 +4,11 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 import "./Token.sol";
 
+// [] manage pools
+// [] manage Deposits
+// [] Facilitate Swaps (i.e. Trades)
+// []Manage Withdrawels
+
 contract AMM {
     Token public token1;
     Token public token2;
